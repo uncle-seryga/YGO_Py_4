@@ -26,7 +26,7 @@ def get_all_cities():
 
 
 def create_session(player_id):
-    open(f"sessions/{player_id}.json", 'w').write(str([]))
+    open(f"sessions/{player_id}.json", 'w').write(str({'turn': 1, 'cities': []}))
 
 
 def get_session_data(player_id):

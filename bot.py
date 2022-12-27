@@ -11,5 +11,4 @@ def action(message):
         sities_methods.create_session(message.from_user.id)
         bot.send_message(message.from_user.id, "Welcome to game, Boiii")
 
-
 bot.polling()
