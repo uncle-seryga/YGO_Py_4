@@ -1,6 +1,7 @@
 import telebot
 import sities_methods
 
+# https://t.me/OlegSmirnovBot
 telegram_bot_key = "5727998641:AAGmixf7PBRDZ3nStxTQJx30PzP8e4BGZiA"
 bot = telebot.TeleBot(telegram_bot_key)
 
