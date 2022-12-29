@@ -31,3 +31,10 @@ def create_session(player_id):
 
 def get_session_data(player_id):
     return eval(open(f"sessions/{player_id}.json", 'r').read())
+
+
+def add_city(word, player_id):
+    f = eval(open(f"sessions/{player_id}.json", 'r').read())
+    f['cities'].append(word)
+    f['turn'] = f['turn'] + 1
+    open(f"sessions/{player_id}.json", 'w').write(str(f))

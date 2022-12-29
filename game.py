@@ -31,3 +31,12 @@ def if_last_letter(player_city: str, previous_city: str):
         return False
 
 
+def if_valid(word, player_id):
+    result = [if_city(word), if_not_played(player_id, word),
+              if_last_letter(word, sities_methods.get_session_data(player_id)['cities'][-1])]
+    if result.count(True) == 3:
+        sities_methods.add_city(word, player_id)
+
+
+
+if_valid("вільнюс", 431008303)
